@@ -116,6 +116,17 @@ class Main {
     public static int findFirstIndex(int[] arr, int x) {
       return findFirstIndexHelper(arr, 0, arr.length-1, x);
     }
+
+    // Find the nth fibonacci number
+    public static int fibonacci(int n) {
+      if (n==0 || n==1) {
+        return n;
+      }
+      int smallerAnswer1 = fibonacci(n-1);
+      int smallerAnswer2 = fibonacci(n-2);
+      int biggerAnswer = smallerAnswer1 + smallerAnswer2;
+      return biggerAnswer;
+    }
     
     public static void main(String[] args) {
       long n = 1234763283l;
